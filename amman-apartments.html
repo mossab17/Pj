@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سكن عمّان | شقق فندقية مفروشة في قلب العاصمة</title>
+<meta name="description" content="شقق فندقية مفروشة للإيجار اليومي في عمّان، الأردن. احجز إقامتك بكل سهولة.">
+
+<!-- Google Fonts: Markazi Text (serif display) + Tajawal (sans body/UI) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Markazi Text"', 'serif'],
+          body: ['"Tajawal"', 'sans-serif'],
+        },
+        colors: {
+          stone50:  '#F4EFE2',
+          stone100: '#EAE1C9',
+          charcoal: '#2A2420',
+          dusk1:    '#F0A868',
+          dusk2:    '#0E2A42',
+          dusk3:    '#0A1D30',
+          teal:     '#1E6E76',
+          terracotta:'#B4573D',
+          terracottaDark:'#8F4230',
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html{scroll-behavior:smooth;}
+  body{font-family:'Tajawal', sans-serif;}
+  .font-display{font-family:'Markazi Text', serif;}
+
+  /* subtle focus ring for keyboard users, on top of Tailwind's defaults */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid #F0A868; outline-offset:2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.01ms !important; transition-duration:.01ms !important;}
+  }
+
+  /* toast */
+  #toast{
+    transform:translateY(140%);
+    transition:transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+  #toast.show{ transform:translateY(0); }
+</style>
+</head>
+<body class="bg-stone50 text-charcoal antialiased">
+
+  <!-- ================= NAV ================= -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-dusk3/90 backdrop-blur supports-[backdrop-filter]:bg-dusk3/70">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display text-2xl text-stone50 tracking-wide">سكن <span class="text-dusk1">عمّان</span></a>
+      <nav class="hidden md:flex items-center gap-8 text-stone100 text-sm font-medium">
+        <a href="#apartments" class="hover:text-dusk1 transition-colors">الشقق</a>
+        <a href="#booking" class="hover:text-dusk1 transition-colors">الحجز</a>
+        <a href="#contact" class="hover:text-dusk1 transition-colors">تواصل معنا</a>
+      </nav>
+      <a href="#booking" class="hidden sm:inline-block bg-terracotta hover:bg-terracottaDark text-stone50 text-sm font-bold px-5 py-2.5 transition-colors">
+        احجز الآن
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="top" class="relative overflow-hidden bg-gradient-to-b from-dusk1 via-[#c97a56] to-dusk3">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-32 pb-56 sm:pt-40 sm:pb-64 relative z-10">
+      <p class="text-stone50/80 text-sm sm:text-base font-medium mb-4">جبل عمّان · إقامة فندقية بروح البيت</p>
+      <h1 class="font-display text-stone50 text-5xl sm:text-6xl lg:text-7xl leading-[1.15] max-w-2xl">
+        شقق مفروشة تطل على تلال العاصمة السبع
+      </h1>
+      <p class="mt-6 text-stone50/90 text-base sm:text-lg max-w-xl leading-relaxed">
+        استوديوهات وأجنحة عائلية مجهزة بالكامل في قلب عمّان، لإقامة قصيرة أو طويلة براحة بيتك وخدمة فندق.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#booking" class="bg-terracotta hover:bg-terracottaDark text-stone50 font-bold px-7 py-3.5 transition-colors">
+          احجز إقامتك
+        </a>
+        <a href="#apartments" class="border border-stone50/40 text-stone50 hover:bg-stone50/10 font-bold px-7 py-3.5 transition-colors">
+          استعرض الشقق
+        </a>
+      </div>
+    </div>
+
+    <!-- Amman hillside skyline illustration -->
+    <svg class="absolute bottom-0 inset-x-0 w-full h-40 sm:h-56 lg:h-64" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="#1B140F">
+        <rect x="0"   y="120" width="90"  height="100"/>
+        <rect x="95"  y="90"  width="70"  height="130"/>
+        <rect x="170" y="140" width="110" height="80"/>
+        <rect x="285" y="70"  width="60"  height="150"/>
+        <rect x="350" y="110" width="95"  height="110"/>
+        <rect x="450" y="50"  width="80"  height="170"/>
+        <rect x="535" y="100" width="65"  height="120"/>
+        <rect x="605" y="130" width="120" height="90"/>
+        <rect x="730" y="80"  width="75"  height="140"/>
+        <rect x="810" y="115" width="90"  height="105"/>
+        <rect x="905" y="60"  width="70"  height="160"/>
+        <rect x="980" y="105" width="100" height="115"/>
+        <rect x="1085" y="135" width="60" height="85"/>
+        <rect x="1150" y="95"  width="50" height="125"/>
+      </g>
+      <g fill="#0E0A07" opacity=".55">
+        <rect x="60"  y="150" width="14" height="20"/>
+        <rect x="115" y="115" width="14" height="20"/>
+        <rect x="200" y="165" width="14" height="20"/>
+        <rect x="305" y="100" width="14" height="20"/>
+        <rect x="385" y="140" width="14" height="20"/>
+        <rect x="475" y="80"  width="14" height="20"/>
+        <rect x="560" y="130" width="14" height="20"/>
+        <rect x="650" y="160" width="14" height="20"/>
+        <rect x="755" y="110" width="14" height="20"/>
+        <rect x="840" y="145" width="14" height="20"/>
+        <rect x="930" y="95"  width="14" height="20"/>
+        <rect x="1015" y="140" width="14" height="20"/>
+        <rect x="1105" y="165" width="14" height="20"/>
+        <rect x="1170" y="125" width="14" height="20"/>
+      </g>
+    </svg>
+  </section>
+
+  <!-- ================= APARTMENT TYPES ================= -->
+  <section id="apartments" class="bg-stone50 py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="max-w-xl">
+        <h2 class="font-display text-4xl sm:text-5xl text-charcoal">أنواع الشقق</h2>
+        <p class="mt-4 text-charcoal/70 leading-relaxed">
+          ثلاث فئات تناسب كل زائر، من الإقامة الفردية السريعة إلى العائلة الممتدة، وكلها مفروشة بالكامل وجاهزة من لحظة الوصول.
+        </p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1: Studio -->
+        <article class="bg-white border border-charcoal/10 border-t-4 border-t-dusk1 flex flex-col">
+          <div class="p-7 flex flex-col gap-4 flex-1">
+            <svg class="w-9 h-9 text-dusk1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5V19h18v-8.5M3 10.5 12 4l9 6.5M7 19v-5h4v5"/>
+            </svg>
+            <h3 class="font-display text-2xl text-charcoal">استوديو مطل على المدينة</h3>
+            <p class="text-sm text-charcoal/70 leading-relaxed">مساحة مدمجة لشخص أو شخصين، سرير مزدوج، مطبخ صغير مجهز، وإطلالة على أسطح جبل عمّان.</p>
+            <div class="mt-auto pt-4 border-t border-charcoal/10 flex items-end justify-between">
+              <div>
+                <span class="font-display text-4xl text-charcoal">35</span>
+                <span class="text-sm text-charcoal/60"> دينار / الليلة</span>
+              </div>
+              <button type="button" data-apt="استوديو مطل على المدينة" class="apt-select-btn text-teal font-bold text-sm hover:underline">
+                احجز الآن
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Family -->
+        <article class="bg-white border border-charcoal/10 border-t-4 border-t-teal flex flex-col">
+          <div class="p-7 flex flex-col gap-4 flex-1">
+            <svg class="w-9 h-9 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-3A3.5 3.5 0 0 0 7 18.5V20M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM20 20v-1a3 3 0 0 0-2.2-2.9M17.5 8.5a2 2 0 1 0 0-4M7 20v-1a3 3 0 0 1 2.2-2.9M6.5 8.5a2 2 0 1 1 0-4"/>
+            </svg>
+            <h3 class="font-display text-2xl text-charcoal">شقة عائلية بغرفتين</h3>
+            <p class="text-sm text-charcoal/70 leading-relaxed">غرفتا نوم وصالة منفصلة تتسع حتى خمسة أفراد، مطبخ كامل، وغسالة ملابس داخل الشقة.</p>
+            <div class="mt-auto pt-4 border-t border-charcoal/10 flex items-end justify-between">
+              <div>
+                <span class="font-display text-4xl text-charcoal">55</span>
+                <span class="text-sm text-charcoal/60"> دينار / الليلة</span>
+              </div>
+              <button type="button" data-apt="شقة عائلية بغرفتين" class="apt-select-btn text-teal font-bold text-sm hover:underline">
+                احجز الآن
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Suite -->
+        <article class="bg-white border border-charcoal/10 border-t-4 border-t-terracotta flex flex-col">
+          <div class="p-7 flex flex-col gap-4 flex-1">
+            <svg class="w-9 h-9 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 21V9l8-5 8 5v12M9 21v-6h6v6M4 13h16"/>
+            </svg>
+            <h3 class="font-display text-2xl text-charcoal">جناح فاخر بثلاث غرف</h3>
+            <p class="text-sm text-charcoal/70 leading-relaxed">جناح واسع بثلاث غرف نوم وشرفتين، مناسب للعائلات الكبيرة أو الإقامات الطويلة، مع خدمة تنظيف أسبوعية.</p>
+            <div class="mt-auto pt-4 border-t border-charcoal/10 flex items-end justify-between">
+              <div>
+                <span class="font-display text-4xl text-charcoal">85</span>
+                <span class="text-sm text-charcoal/60"> دينار / الليلة</span>
+              </div>
+              <button type="button" data-apt="جناح فاخر بثلاث غرف" class="apt-select-btn text-teal font-bold text-sm hover:underline">
+                احجز الآن
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BOOKING ================= -->
+  <section id="booking" class="bg-dusk3 py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-start">
+
+      <div class="text-stone50">
+        <h2 class="font-display text-4xl sm:text-5xl">احجز إقامتك</h2>
+        <p class="mt-4 text-stone50/75 leading-relaxed max-w-md">
+          عبّي بيانات الحجز وبنتواصل معك خلال ساعات لتأكيد التفاصيل وطريقة الدفع. الدفع عند الوصول أو تحويل بنكي مسبق.
+        </p>
+        <ul class="mt-8 space-y-3 text-sm text-stone50/80">
+          <li class="flex items-center gap-3">
+            <span class="w-1.5 h-1.5 bg-dusk1"></span> تأكيد الحجز خلال أقل من ٣ ساعات
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-1.5 h-1.5 bg-dusk1"></span> إمكانية الإلغاء المجاني قبل ٤٨ ساعة
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-1.5 h-1.5 bg-dusk1"></span> استقبال في أي وقت بالتنسيق المسبق
+          </li>
+        </ul>
+      </div>
+
+      <form id="bookingForm" novalidate class="bg-stone50 p-7 sm:p-9 shadow-2xl">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="checkin" class="block text-xs font-bold text-charcoal/70 mb-2">تاريخ الوصول</label>
+            <input type="date" id="checkin" required
+                   class="w-full border border-charcoal/20 px-3.5 py-2.5 bg-white text-charcoal focus:border-terracotta">
+          </div>
+          <div>
+            <label for="checkout" class="block text-xs font-bold text-charcoal/70 mb-2">تاريخ المغادرة</label>
+            <input type="date" id="checkout" required
+                   class="w-full border border-charcoal/20 px-3.5 py-2.5 bg-white text-charcoal focus:border-terracotta">
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label for="aptType" class="block text-xs font-bold text-charcoal/70 mb-2">نوع الشقة</label>
+          <select id="aptType" class="w-full border border-charcoal/20 px-3.5 py-2.5 bg-white text-charcoal focus:border-terracotta">
+            <option value="استوديو مطل على المدينة">استوديو مطل على المدينة — 35 د.أ/الليلة</option>
+            <option value="شقة عائلية بغرفتين">شقة عائلية بغرفتين — 55 د.أ/الليلة</option>
+            <option value="جناح فاخر بثلاث غرف">جناح فاخر بثلاث غرف — 85 د.أ/الليلة</option>
+          </select>
+        </div>
+
+        <div class="mt-5">
+          <label for="phone" class="block text-xs font-bold text-charcoal/70 mb-2">رقم الهاتف</label>
+          <input type="tel" id="phone" required placeholder="07xxxxxxxx"
+                 class="w-full border border-charcoal/20 px-3.5 py-2.5 bg-white text-charcoal placeholder:text-charcoal/35 focus:border-terracotta">
+          <p id="phoneErr" class="hidden mt-2 text-xs text-terracottaDark font-medium">رجاءً أدخل رقم هاتف أردني صحيح (يبدأ بـ 07).</p>
+        </div>
+
+        <button type="submit" class="mt-7 w-full bg-terracotta hover:bg-terracottaDark text-stone50 font-bold py-3.5 transition-colors">
+          إرسال طلب الحجز
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / FOOTER ================= -->
+  <footer id="contact" class="bg-dusk3 border-t border-stone50/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 grid sm:grid-cols-3 gap-10 text-stone50/80">
+      <div>
+        <div class="font-display text-2xl text-stone50">سكن <span class="text-dusk1">عمّان</span></div>
+        <p class="mt-3 text-sm leading-relaxed">شقق فندقية مفروشة في جبل عمّان، إقامة يومية أو شهرية بخدمة كاملة.</p>
+      </div>
+      <div class="text-sm space-y-2">
+        <p class="font-bold text-stone50">تواصل معنا</p>
+        <p>هاتف / واتساب: 079xxxxxxx</p>
+        <p>البريد: info@sakan-amman.jo</p>
+      </div>
+      <div class="text-sm space-y-2">
+        <p class="font-bold text-stone50">الموقع</p>
+        <p>جبل عمّان، الدوار الثالث، عمّان، الأردن</p>
+      </div>
+    </div>
+    <div class="border-t border-stone50/10 py-6 text-center text-xs text-stone50/50">
+      © 2026 سكن عمّان. جميع الحقوق محفوظة.
+    </div>
+  </footer>
+
+  <!-- ================= TOAST ================= -->
+  <div id="toast" class="fixed bottom-6 inset-x-5 sm:inset-x-auto sm:left-6 sm:max-w-sm bg-charcoal text-stone50 px-5 py-4 shadow-2xl z-50 flex items-start gap-3">
+    <svg class="w-5 h-5 text-dusk1 flex-none mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+    </svg>
+    <p id="toastMsg" class="text-sm leading-relaxed"></p>
+  </div>
+
+  <script>
+    // ---------- date logic: checkout must be after checkin ----------
+    const checkinEl  = document.getElementById('checkin');
+    const checkoutEl = document.getElementById('checkout');
+
+    const todayStr = new Date().toISOString().split('T')[0];
+    checkinEl.min = todayStr;
+
+    checkinEl.addEventListener('change', () => {
+      if (!checkinEl.value) return;
+      const nextDay = new Date(checkinEl.value);
+      nextDay.setDate(nextDay.getDate() + 1);
+      const minCheckout = nextDay.toISOString().split('T')[0];
+      checkoutEl.min = minCheckout;
+      if (checkoutEl.value && checkoutEl.value < minCheckout) {
+        checkoutEl.value = minCheckout;
+      }
+    });
+
+    // ---------- apartment card "احجز الآن" buttons: pick type + scroll to form ----------
+    const aptSelect = document.getElementById('aptType');
+    document.querySelectorAll('.apt-select-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        aptSelect.value = btn.dataset.apt;
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ---------- toast ----------
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    let toastTimer;
+    function showToast(message) {
+      toastMsg.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 5000);
+    }
+
+    // ---------- booking form submit ----------
+    const form = document.getElementById('bookingForm');
+    const phoneEl = document.getElementById('phone');
+    const phoneErr = document.getElementById('phoneErr');
+    const jordanPhone = /^07[789]\d{7}$/;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const phoneClean = phoneEl.value.replace(/[\s-]/g, '');
+      const phoneValid = jordanPhone.test(phoneClean);
+      phoneErr.classList.toggle('hidden', phoneValid);
+      phoneEl.classList.toggle('border-terracottaDark', !phoneValid);
+
+      if (!checkinEl.value || !checkoutEl.value || !phoneValid) {
+        if (!phoneValid) phoneEl.focus();
+        return;
+      }
+
+      showToast(`تم استلام طلب حجز "${aptSelect.value}" من ${checkinEl.value} إلى ${checkoutEl.value}. بنتواصل معك قريباً على ${phoneClean}.`);
+      form.reset();
+      checkinEl.min = todayStr;
+      checkoutEl.min = todayStr;
+    });
+  </script>
+
+</body>
+</html>
